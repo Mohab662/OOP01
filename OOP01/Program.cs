@@ -51,15 +51,14 @@
         #endregion
         static void Main(string[] args)
         {
-            #region Problem1
+            #region Q1: Create an enum called "WeekDays" with the days of the week (Monday to Sunday) as its members. Then, write a C# program that prints out all the days of the week using this enum.
             for (int i = 0; i < Enum.GetValues(typeof(WeekDays)).Length; i++)
             {
                 Console.WriteLine((WeekDays)i);
             }
             #endregion
 
-
-            #region Problem2
+            #region Q2: Define a struct "Person" with properties "Name" and "Age". Create an array of three "Person" objects and populate it with data. Then, write a C# program to display the details of all the persons in the array.
             Person[] people = new Person[3];
 
 
@@ -74,8 +73,7 @@
             }
             #endregion
 
-
-            #region Problem3
+            #region Q3: Create an enum called "Season" with the four seasons (Spring, Summer, Autumn, Winter) as its members. Write a C# program that takes a season name as input from the user and displays the corresponding month range for that season. Note range for seasons ( spring march to may , summer june to august , autumn September to November , winter December to February)
             {
                 Console.WriteLine("enter season name");
                 Season selectedSeason;
@@ -100,8 +98,7 @@
             }
             #endregion
 
-
-            #region Problem4
+            #region Q4: Assign the following Permissions (Read, write, Delete, Execute) in a form of Enum.
             Permissions permissions = Permissions.Read | Permissions.write;
 
             Console.WriteLine("Initial permissions: " + permissions);
@@ -116,7 +113,7 @@
             Console.WriteLine("Has Delete permission: " + (permissions.HasFlag(Permissions.Delete)));
             #endregion
 
-            # region  Problem5
+            # region  Q5: Create an enum called "Colors" with the basic colors (Red, Green, Blue) as its members. Write a C# program that takes a color name as input from the user and displays a message indicating whether the input color is a primary color or not.
             Console.Write("Enter a color: ");
             string colorInput = Console.ReadLine();
 
@@ -131,7 +128,8 @@
                 Console.WriteLine("Invalid color");
             }
             #endregion
-            #region Problem6
+
+            #region Q6: Create a struct called "Point" to represent a 2D point with properties "X" and "Y". Write a C# program that takes two points as input from the user and calculates the distance between them.
             bool flag = false;
             double x1, y1, x2, y2;
 
@@ -168,7 +166,8 @@
 
             Console.WriteLine(CalculateDistance(p1, p2));
             #endregion
-            #region Problem7
+
+            #region Q7: Create a struct called "Person" with properties "Name" and "Age". Write a C# program that takes details of 3 persons as input from the user and displays the name and age of the oldest person.
             bool flag1;
             int agge = 0;
             int oldestAge = 0, oldestAgeIndex = 0; ;
@@ -201,6 +200,7 @@
             Console.WriteLine($"The Oldest Name Is : {People[oldestAgeIndex].Name} && Age Is : {People[oldestAgeIndex].Age}");
 
             #endregion
+
         }
     }
 }
